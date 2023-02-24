@@ -1,0 +1,464 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --color-orange:#f59d1b;
+    --color-black: #1b1f1d;
+    --color-grey: #606060;
+    --color-white: #ecebeb;
+    --color-cream: blanchedalmond;
+}
+
+@font-face {
+    font-family: 'Romanica';
+    src: url('/fonts/Romanica.ttf');
+}
+
+body {
+    z-index: 400;
+    scrollbar-width: none;
+    max-height: 100vh;
+    background-color: var(--color-cream);
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+}
+
+.titleHeader {
+    flex-direction: row;
+    text-align: center;
+}
+
+.titleRust {
+    font-family: 'Lato', sans-serif;
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+.textRust {
+    font-family: sans-serif;
+    font-size: 1.7vw;
+}
+
+.contSocial{
+    display: flex;
+    justify-content: end;
+    min-width: 15%;
+}
+
+.contSocial ul {
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+
+.contSocial ul li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.contSocial ul li a {
+    color: var(--color-black);
+}
+
+.contSocial ul li a:hover{
+    color: var(--color-orange);
+}
+
+
+
+.contHeader {
+    display: flex;
+    height: 40vh;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logoRust {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    max-width: 250px;
+    max-height: 300px;
+    text-align: center;
+}
+
+.logoRust img {
+    width: 13vw;
+}
+
+
+
+.titleHeader h1 {
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+.titleHeader p {
+    margin: 0 auto;
+    font-size: 2vw;
+}
+
+
+
+
+.icon-redes {
+    font-size: 30px;
+}
+
+.contHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.logoRust {
+    min-width: 150px;
+}
+
+.contenedor-bajo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    border-top: 1px solid var(--color-orange);
+    background-color: var(--color-black);
+}
+
+
+
+
+.contNavigator { 
+    position: sticky;
+    top: 0;
+    z-index: 600;
+}
+
+.menuNavigator {
+    width: 100%;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid var(--color-orange);
+    border-bottom: 3px solid var(--color-orange);
+}
+
+
+.menuNavigator a{
+    width: 12vw;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.menuNavigator a{
+    color: var(--color-orange);
+    text-decoration: none;
+}
+
+.menuNavigator {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.menuNavigator a:hover {
+    background-color: var(--color-orange);
+    transform: scale(1.03);
+    transition: 0.6s;
+    opacity: 1;
+}
+
+
+
+
+.menuNavigator a:hover {
+    background-color: var(--color-orange);
+    color: var(--color-black);
+    font-size: 20px;
+}
+
+.menuNavigator {
+    position: relative;
+    box-shadow: none;
+}
+
+.menuNavigator a {
+    color: var(--color-orange);
+    opacity: 0.8;
+    border-left: 0.5px solid var(--color-orange);
+    border-right: 0.5px solid var(--color-orange);
+    text-transform: uppercase;
+}
+
+.menuNavigator a:hover {
+    background-color: var(--color-orange);
+    color: var(--color-black);
+}
+
+.menuNavigator a {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+.inicioMenu {
+    position: relative;
+}
+
+
+.menuBTN {
+    width: 100%;
+    background-color: var(--color-black);
+    top:0;
+    display: flex;
+    justify-content: center;
+cursor: pointer;
+}
+
+
+.menuContent {
+    display: none;
+    position: absolute;
+    margin-right: auto;
+    background-color: var(--color-black);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+    z-index: 550;
+    border: 2px solid var(--color-orange);
+}
+
+.menuContent a {
+    width: 22vw;
+    padding: 1vw;
+    color: var(--color-orange);
+    border-bottom: 2px solid var(--color-orange);
+    height: 50%;
+    text-decoration: none;
+    display: block;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+}
+
+.menuContent a:hover {
+    background-color: var(--color-orange);
+    color: var(--color-black);
+    transform: scale(1.03);
+}
+
+.inicioMenu:hover .menuBTN:hover {
+    background-color: var(--color-orange);
+    color: var(--color-black);
+    transition: all 250ms;
+}
+
+.inicioMenu:hover .menuContent{
+    display: block;
+}
+
+.buttonPerfil:hover .menuBTN:hover {
+    background-color: var(--color-black);
+    transform: scale(1.03);
+    box-shadow: -1px 2px 10px rgba(0,0,0,0.3);
+    transition: all 250ms;
+}
+
+
+
+
+
+
+
+
+
+
+.contHeader {
+    top: 0%;
+    width: 100%;
+    height: auto;
+    padding: 2vmin; 
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+}
+
+.contLogo {
+    width: 100%;
+    max-height: 300px;
+}
+
+.logoRust {
+    width: 15vw;
+    display: flex;
+    margin: auto;
+}
+
+
+
+.logoRust:hover {
+    transform: scale(1.1);
+}
+
+
+.containerText {
+    width: 500px;
+    padding-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rustique {
+    font-size: 6.5vw;
+    margin: 3% auto 1% auto;
+    font-family: 'Romanica', Arial, Helvetica, sans-serif;
+}
+
+.subTitleRust {
+    margin: 3% auto 1% auto;
+    font-size: 2.5vw;
+}
+
+.rustique,
+.subTitleRust,
+.textInicio {
+    text-align: center;font-family: 'Romanica', Arial, Helvetica, sans-serif;
+}
+
+.textInicio {
+    font-size: 1.5vw;
+    font-weight: normal;
+}
+
+.btnIn {
+    width: 100%;
+    text-align: center;
+}
+
+.btnIn a {
+    width: 40%;
+}
+
+.btnIn input {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    border: 2px solid var(--color-black);
+    font-weight: bold;
+    font-family: sans-serif;
+    width: 40%;
+    max-width: 200px;
+    height: 5vh;
+    border-radius: 5px;
+}
+
+.btnIn input:hover {
+    background-color: var(--color-black);
+    color: var(--color-yellow);
+}
+
+
+
+
+
+/***************************************************************************************************
+                                    INICIO MEDIA QUERYS
+****************************************************************************************************/
+/*Media query con un ancho mínimo de 600 pixeles*/
+@media only screen and (min-width: 500px) {
+    
+    /*Contenedor de todos los elementos del body*/
+    .acceder {
+        background: var(--color-yellow);
+        padding: 0px;
+    }
+    /*Contenedor de la imagen al lado del formulario*/
+    .contenedor-img-acceder {
+        width: 50%;
+        display: block;
+    }
+    /*Contenedor del formulario*/
+    .acceder-formulario {
+        font-size: 1rem;
+        width: 50%;
+        background: none;
+        display: flex;
+        align-items: center;
+    }
+    /*Segundo contenedor del footer y contenedor de todas las listas*/
+    .contenedor-footer, .footer-list-conteiner {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    /*H3 de toda la página*/
+    h3 {
+        width: auto;
+    }
+    /*H1 de toda la página*/
+    h1{
+        font-size: 3rem;
+    }
+    /*Estilo de los li de la botonera del menú cuando se pone el mouse encima*/
+    .botonera li:hover {
+        background-color: var(--color-yellow);
+        color: var(--color-black);
+        font-size: 15px;
+        font-weight: bold;
+    }
+    /*Estilo de los inputs del contenedor de todo el body*/
+    .acceder input {
+        height: 4vh;
+        font-size: 20px;
+    }
+    /*Elementos lable del contenedor dentro del body*/
+    .acceder label{
+        font-size: 20px;
+    }
+    /*Elementos textarea dentro del contenedor del body*/
+    .acceder textarea{
+        height: 15vh;
+    }
+    /*"ul" dentro del contenedor de las redes sociales*/
+    .contenedor-redes ul{
+        display: block;
+    }
+}
+/*Media query con un ancho mínimo de 900 pixeles*/
+
+/*Media query con un ancho mínimo de 1200 pixeles*/
+@media only screen and (min-width: 1200px){
+    /*Inputs dentro del contenedor del body*/
+    .acceder input {
+        height: 4vh;
+        font-size: 20px;
+    }
+    /*Label dentro del contenedor del body*/
+    .acceder label{
+        font-size: 20px;
+    }
+    /*"li" de la botonera del menú cuando se le pone el mouse encima*/
+    .botonera li:hover {
+        background-color: var(--color-yellow);
+        color: var(--color-black);
+        font-size: 20px;
+    }
+    
+}
+
+/***************************************************************************************************
+                                          FIN MEDIA QUERYS
+****************************************************************************************************/
